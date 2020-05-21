@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register</title>
+    <style>
+        .msg{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Login</h3>
+    <form onsubmit="return loginvalidate('username','msg1','password','msg2')" action="Loginverify" method="post">
+        
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" onfocusout="usernamevalidation('username', 'msg1')" />
+        <p id="msg1" class="msg"></p>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" onfocusout="passwordvalidation('password', 'msg2')" />
+        <p id="msg2" class="msg"></p>
+        
+        <button type="submit" name="action">Login</button>
+    </form>
+    <script type="text/javascript" src="js/validation.js"></script>
+</body>
+</html>
